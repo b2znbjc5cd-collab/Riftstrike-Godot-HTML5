@@ -49,3 +49,25 @@ func spawn_turret(owner_id, position):
     t.global_position = position
     add_child(t)
     return t
+
+# Handle spawn requests from network manager (server side)
+func handle_spawn_request(requester_id, card_id, position):
+    # validate cost using internal players table and card list
+    var cm = get_node_or_null("/root/Main/World/CardManager")
+    if cm == null:
+        return
+    var card = cm.find_card_by_id(card_id)
+    if card == null:
+        return
+    var cost = card.get("cost", 0)
+    if not spend_adrenalina(requester_id, cost):
+        # insufficient resource
+        return
+    match card.get("type", ""):
+        "agent":
+            spawn_agent(requester_id, position)
+        "turret":
+            spawn_turret(requester_id, position)
+        _:
+            # other types: fields, tactics, gambits handled later
+            pass
