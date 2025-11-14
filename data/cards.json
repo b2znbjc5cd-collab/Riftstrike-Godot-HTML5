@@ -1,0 +1,10 @@
+[
+  { "id": "centinela_mk1", "name": "Centinela Mk I", "type": "turret", "cost": 4, "description": "Torreta automática: 12s de vida, daño en cono." },
+  { "id": "asalto_rapido", "name": "Asalto Rápido", "type": "agent", "cost": 3, "description": "Soldado con dash; daño medio." },
+  { "id": "niebla_cortina", "name": "Niebla de Cortina", "type": "field", "cost": 5, "description": "10s de niebla que reduce visión enemiga 60%." },
+  { "id": "pulso_overload", "name": "Pulso Overload", "type": "tactic", "cost": 6, "description": "Onda que desactiva torretas 3s." },
+  { "id": "mina_tactica", "name": "Mina Táctica", "type": "gambit", "cost": 2, "description": "Se oculta hasta que la pisa un rival." },
+  { "id": "amplificador", "name": "Amplificador", "type": "modifier", "cost": 3, "description": "+20% daño a la siguiente Agente en 12s." },
+  { "id": "dron_frag", "name": "Dron de Frag", "type": "agent", "cost": 4, "description": "Dron que puede ser controlado manualmente para mejorar precisión." },
+  { "id": "cura_inst", "name": "Curación Instantánea", "type": "tactic", "cost": 3, "description": "Cura 20% de vida en área pequeña." }
+]
